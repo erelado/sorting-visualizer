@@ -1,0 +1,218 @@
+
+@media (max-width: 480px) /* Mobiles */
+{
+    * {
+        font-size: 12px;
+    }
+}
+@media (min-width: 481px) and (max-width: 1250px) /* Tablets */
+{
+    * {
+        font-size: 14px;
+    }
+
+    .waves {
+        height:20rem;
+        min-height:5rem;
+      }
+}
+@media (min-width: 1251px) /* Laptops + */
+{
+    * {
+        font-size: 16px;
+    }
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+
+/* Waves Animation - Start */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /* Waves Animation - End */
+
+h1 {
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    display: flex;
+}
+
+button {
+    color: #539BF5;
+    background-color: #373E47;
+    border: 1px solid #444C56;
+    transition: .2s cubic-bezier(.3,0,.5,1);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.2rem 0.8rem;
+}
+
+button:hover {
+    background-color: #444C56;
+    border: 1px solid #539BF5;
+    box-shadow: 0 1px 0 rgba(28,33,40,0.1), inset 0 1px 0 rgba(205,217,229,0.03);
+}
+
+button:active {
+    background-color: #1B4B91;
+    box-shadow: 0 0 transparent;
+    color: #CDD9E5;
+    box-shadow: 0 0 0 3px rgba(37,90,178,0.4);
+}
+
+nav {
+    height: 2rem;
+    padding: 0.8rem 2rem;
+    background: #24292e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #404040;
+}
+
+.github-icon {
+    --size: 2rem;
+    position: relative;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    margin-right: 1rem;
+}
+
+nav #algorithms {
+    flex: 1;
+    color: #aaa;
+    justify-content: center;
+    display: flex;
+}
+
+nav #algorithms > a {
+    margin-left: 1.5rem;
+}
+
+nav #algorithms > a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 2rem;
+    padding: 0.8rem 2rem;
+    background: #24292e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #404040;
+}
+
+footer div {
+    display: inline-block;
+    margin-right: 4rem;
+}
+
+footer #settings {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--inner-color);
+    opacity: 0.85;
+    will-change: opacity;
+}
+
+footer a > span {
+    font-size: 0.8rem;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+.sprite {
+    display: none;
+}
+
+span.icon {
+    position: relative;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+}
+
+svg.icon {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+    top: 0.2rem;
+}
+
+#container {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#visualizer-canvas {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    min-height: 32rem;
+}
+
+.bar {
+    margin:0 1px;
+    background-color: #add8e6;
+    width: 3rem;
+    display: flex;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.bar span {
+    align-self: flex-end;
+    margin: 0 auto;
+}
